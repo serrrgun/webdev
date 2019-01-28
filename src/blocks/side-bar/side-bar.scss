@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока side-bar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.side-bar {
+
+  $block-name:                &; // #{$block-name}__element
+
+  width: 35.5%;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 50px;
+    color: #525252;
+  }
+
+  &__title::after {
+    content: '.';
+    color: #d55fef;
+  }
+
+  &__desc {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 28px;
+    color: #525252;
+  }
+}
