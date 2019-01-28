@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-display: swap; }
+
+.chrome {
+  background-image: url(../img/sprite-006801855253316891.png);
+  background-position: 0px 0px;
+  width: 64px;
+  height: 64px; }
+
+.github-logo {
+  background-image: url(../img/sprite-006801855253316891.png);
+  background-position: -68px 0px;
+  width: 64px;
+  height: 64px; }
+
+.placeholder {
+  background-image: url(../img/sprite-006801855253316891.png);
+  background-position: 0px -68px;
+  width: 64px;
+  height: 64px; }
+
+@-ms-viewport {
+  width: device-width; }
+
+.page {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  min-width: 320px;
+  min-height: 100%; }
+  .page__inner::after {
+    content: "";
+    position: absolute;
+    background: url("../img/circle-top.png") no-repeat;
+    top: 0;
+    left: 0;
+    width: 21.5%;
+    height: 415px;
+    z-index: -10; }
+  .page__content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-top: 10vh;
+    padding-bottom: 10vh; }
+  .page__footer-wrapper {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  background-color: #fff;
+  margin: 0;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Montserrat, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #231F20; }
+
+[tabindex='-1']:focus {
+  outline: none !important; }
+
+[role='button'] {
+  cursor: pointer; }
+
+input[type='search'] {
+  -webkit-appearance: textfield; }
+
+a,
+button,
+[role='button'],
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
+a svg,
+button svg {
+  pointer-events: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.side-bar {
+  width: 35.5%; }
+  .side-bar__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 50px;
+    color: #525252; }
+  .side-bar__title::after {
+    content: '.';
+    color: #d55fef; }
+  .side-bar__desc {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 28px;
+    color: #525252; }
+
+/*# sourceMappingURL=style.css.map */
