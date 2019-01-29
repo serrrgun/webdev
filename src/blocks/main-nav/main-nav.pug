@@ -1,14 +1,46 @@
 mixin main-nav(selected)
 
   -
-    var menu = {
-      'Home': '/home',
-      'Blog': '/blog',
-      'Contact': '/contact'
-    };
+    var navigation = [
+      {
+        'select': 'about me',
+        'link': 'index.html',
+        'title': 'главная',
+        'titleLink': 'Обо мне',
+        'iconLink': 'img/sprite-svg.svg#about',
+        'linkClass': 'main-nav__link main-nav__link--about'
+      },
+      {
+        'select': 'experience',
+        'link': 'experience.html',
+        'title': 'опыт',
+        'titleLink': 'Опыт',
+        'iconLink': 'img/sprite-svg.svg#profile',
+        'linkClass': 'main-nav__link main-nav__link--experience'
+      },
+      {
+        'select': 'portfolio',
+        'link': 'portfolio.html',
+        'title': 'портфолио',
+        'titleLink': 'Портфолио',
+        'iconLink': 'img/sprite-svg.svg#suitcase',
+        'linkClass': 'main-nav__link main-nav__link--portfolio'
+      },
+      {
+        'select': 'skills',
+        'link': 'sfills.html',
+        'title': 'скилл',
+        'titleLink': 'Cкилл',
+        'iconLink': 'img/sprite-svg.svg#skills',
+        'linkClass': 'main-nav__link main-nav__link--skills'
+      }
+    ];
 
   nav.main-nav
     ul.main-nav__list
-      each val, key in menu
-        li(class= selected.toLowerCase() === key.toLowerCase() ? 'main-nav__item  main-nav__item--active' : 'main-nav__item')
-          a(href=val, title=key)= key
+      each val in navigation
+        li(class= selected.toLowerCase() === val.select.toLowerCase() ? 'main-nav__item  main-nav__item--active' : 'main-nav__item')
+          a(href=val.link, title=val.title class=val.linkClass)
+            span= val.titleLink
+            svg.main-nav__item-icon
+              use(xlink:href=val.iconLink)

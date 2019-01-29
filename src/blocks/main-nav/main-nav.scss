@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,160 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
+  overflow: hidden;
+
+
+  &__list {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    border: 9px solid #f1f1f1;
+    border-radius: 50%;
+
+    transform: rotate(-45deg);
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      width: 7vw;
+      height: 7vw;
+      box-sizing: border-box;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,- 50%);
+      z-index: 15;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    width: 14vw;
+    height: 14vw;
+    left: -10px;
+    top: -10px;
+    overflow: hidden;
+    transform-origin: 100% 100%;
+    transition: .5s;
+
+    &:hover,
+    &:focus {
+      background-color: #f1f1f1;
+    }
+
+    &:nth-child(1) {
+      transform: rotate(0deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(180deg);
+    }
+
+    &:nth-child(4) {
+      transform: rotate(270deg);
+    }
+
+    &--active {
+      background-color: #f1f1f1;
+
+      .main-nav__link span  {
+        transform: scale(1);
+      }
+
+      .main-nav__link svg {
+        fill: #d260f7;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 14vw;
+    height: 14vw;
+    transition: .5s;
+    text-decoration: none;
+
+    &:hover span,
+    &:focus span {
+      transform: scale(1);
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: #d260f7;
+    }
+
+    &--about {
+      transform: rotate(45deg);
+      padding-top: 63%;
+      padding-left: 48%;
+
+      svg {
+        left: 65%;
+      }
+    }
+
+    &--experience {
+      transform: rotate(-45deg);
+      padding-top: 71%;
+      padding-left: 39%;
+
+      svg {
+        top: 58%;
+      }
+    }
+
+    &--portfolio {
+      transform: rotate(-135deg);
+      padding-top: 62%;
+      padding-left: 19%;
+
+      svg {
+        left: 40%;
+      }
+    }
+
+    &--skills {
+      transform: rotate(135deg);
+      padding-top: 48%;
+      padding-left: 39%;
+
+      svg {
+        top: 35%;
+      }
+    }
+
+    svg {
+      fill: #9b9b9b;
+    }
+
+    span {
+      display: block;
+      transform: scale(0);
+      transition: .5s;
+      font-size: 1vw;
+      color: #656565;
+    }
+  }
+
+  &__item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3vw;
+    height: 3vw;
+
+  }
 }
