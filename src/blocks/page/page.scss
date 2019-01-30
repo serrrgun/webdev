@@ -22,7 +22,7 @@
   min-height: 100%;
 
   &__inner {
-    //
+    overflow: hidden;
   }
 
   &__inner::after {
@@ -37,12 +37,14 @@
   }
 
   &__content {
+    display: flex;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
     padding-left: 7.5%;
     padding-right: 7.5%;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
   }
 
   &__footer-wrapper {

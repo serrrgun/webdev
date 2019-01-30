@@ -65,6 +65,8 @@ let jsList = [
   './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js',
+  dirs.source + '/js/typed.js',
+  dirs.source + '/js/jquery.scrollbar.min.js',
   dirs.source + '/js/script.js',
 ];
 

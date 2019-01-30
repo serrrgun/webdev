@@ -1,5 +1,10 @@
 // Это диспетчер подключений, тут не должно быть ничего, кроме импортов
 
+// Файлы для плагинов
+
+@import './src/scss/plugins/typed.scss';
+@import './src/scss/plugins/jquery.scrollbar.scss';
+
 // Глобальные подключения
 @import 'variables.scss';
 @import 'fonts.scss';
@@ -12,3 +17,8 @@
 @import './src/blocks/page/page.scss';
 @import './src/blocks/main-nav/main-nav.scss';
 @import './src/blocks/side-bar/side-bar.scss';
+@import './src/blocks/social/social.scss';
+@import './src/blocks/content/content.scss';
+
+
+

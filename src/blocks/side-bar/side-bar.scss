@@ -11,9 +11,11 @@
   &__title {
     margin: 0;
     padding: 0;
+    margin-bottom: 1vh;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: 50px;
+    font-size: 5vh;
+    line-height: 1;
     color: #525252;
   }
 
@@ -25,9 +27,10 @@
   &__desc {
     margin: 0;
     padding: 0;
-    margin-bottom: 7vh;
+    margin-bottom: 6vh;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 2.8vh;
     color: #525252;
+    line-height: 1;
   }
 }

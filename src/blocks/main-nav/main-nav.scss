@@ -6,16 +6,17 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  width: 28vw;
-  height: 28vw;
+  margin-bottom: 6vh;
+  width: 50vh;
+  height: 50vh;
   border-radius: 50%;
   overflow: hidden;
 
 
   &__list {
     position: relative;
-    width: 28vw;
-    height: 28vw;
+    width: 50vh;
+    height: 50vh;
     padding: 0;
     margin: 0 auto;
     list-style: none;
@@ -27,8 +28,8 @@
     &::after {
       content: "";
       border-radius: 50%;
-      width: 7vw;
-      height: 7vw;
+      width: 14vh;
+      height: 14vh;
       box-sizing: border-box;
       background-color: #fff;
       position: absolute;
@@ -41,8 +42,8 @@
 
   &__item {
     position: absolute;
-    width: 14vw;
-    height: 14vw;
+    width: 25vh;
+    height: 25vh;
     left: -10px;
     top: -10px;
     overflow: hidden;
@@ -74,7 +75,7 @@
       background-color: #f1f1f1;
 
       .main-nav__link span  {
-        transform: scale(1);
+        opacity: 1;
       }
 
       .main-nav__link svg {
@@ -85,19 +86,19 @@
 
   &__link {
     display: block;
-    width: 14vw;
-    height: 14vw;
-    transition: .5s;
+    width: 25vh;
+    height: 25vh;
     text-decoration: none;
 
     &:hover span,
     &:focus span {
-      transform: scale(1);
+
+      opacity: 1;
     }
 
     &:hover svg,
     &:focus svg {
-      fill: #d260f7;
+      transition: .5s;
     }
 
     &--about {
@@ -107,6 +108,11 @@
 
       svg {
         left: 65%;
+      }
+
+      &:hover svg,
+      &:focus svg {
+       fill: #d260f7;
       }
     }
 
@@ -118,6 +124,11 @@
       svg {
         top: 58%;
       }
+
+      &:hover svg,
+      &:focus svg {
+       fill: #5699fe;
+      }
     }
 
     &--portfolio {
@@ -127,6 +138,11 @@
 
       svg {
         left: 40%;
+      }
+
+      &:hover svg,
+      &:focus svg {
+       fill: #f56a60;
       }
     }
 
@@ -138,6 +154,11 @@
       svg {
         top: 35%;
       }
+
+      &:hover svg,
+      &:focus svg {
+       fill: #00dbaf;
+      }
     }
 
     svg {
@@ -146,20 +167,20 @@
 
     span {
       display: block;
-      transform: scale(0);
-      transition: .5s;
-      font-size: 1vw;
+      opacity: 0;
+      font-size: 1.8vh;
       color: #656565;
     }
   }
 
   &__item-icon {
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 3vw;
-    height: 3vw;
+    width: 5.5vh;
+    height: 5.5vh;
 
   }
 }
