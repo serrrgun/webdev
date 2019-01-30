@@ -1,3 +1,172 @@
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*************** SCROLLBAR BASE CSS ***************/
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative; }
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important; }
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0; }
+
+.scroll-element {
+  display: none; }
+
+.scroll-element, .scroll-element div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block; }
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default; }
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999; }
+
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important; }
+
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important; }
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0; }
+
+/*************** SCROLLBAR MAC OS X ***************/
+.scrollbar-macosx > .scroll-element,
+.scrollbar-macosx > .scroll-element div {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10; }
+
+.scrollbar-macosx > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%; }
+
+.scrollbar-macosx > .scroll-element .scroll-element_track {
+  display: none; }
+
+.scrollbar-macosx > .scroll-element .scroll-bar {
+  background-color: #6C6E71;
+  display: block;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  border-radius: 7px;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear; }
+
+.scrollbar-macosx:hover > .scroll-element .scroll-bar,
+.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  opacity: 0.7; }
+
+.scrollbar-macosx > .scroll-element.scroll-x {
+  bottom: 0px;
+  height: 0px;
+  left: 0;
+  min-width: 100%;
+  overflow: visible;
+  width: 100%; }
+
+.scrollbar-macosx > .scroll-element.scroll-y {
+  height: 100%;
+  min-height: 100%;
+  right: 0px;
+  top: 0;
+  width: 0px; }
+
+/* scrollbar height/width & offset from container borders */
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar {
+  height: 7px;
+  min-width: 10px;
+  top: -9px; }
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
+  left: -9px;
+  min-height: 10px;
+  width: 7px; }
+
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer {
+  left: 2px; }
+
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size {
+  left: -4px; }
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer {
+  top: 2px; }
+
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size {
+  top: -4px; }
+
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+  left: -11px; }
+
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+  top: -11px; }
+
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -13,19 +182,19 @@
   font-display: swap; }
 
 .chrome {
-  background-image: url(../img/sprite-07819257116036062.png);
+  background-image: url(../img/sprite-06359652529654063.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-07819257116036062.png);
+  background-image: url(../img/sprite-06359652529654063.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-07819257116036062.png);
+  background-image: url(../img/sprite-06359652529654063.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -42,6 +211,8 @@
   -ms-text-size-adjust: 100%;
   min-width: 320px;
   min-height: 100%; }
+  .page__inner {
+    overflow: hidden; }
   .page__inner::after {
     content: "";
     position: absolute;
@@ -52,12 +223,16 @@
     height: 415px;
     z-index: -10; }
   .page__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
     padding-left: 7.5%;
     padding-right: 7.5%;
-    padding-top: 10vh;
-    padding-bottom: 10vh; }
+    padding-top: 9vh;
+    padding-bottom: 9vh; }
   .page__footer-wrapper {
     -ms-flex-negative: 0;
         flex-shrink: 0; }
@@ -105,6 +280,7 @@ img {
   height: auto; }
 
 .main-nav {
+  margin-bottom: 6vh;
   width: 50vh;
   height: 50vh;
   border-radius: 50%;
@@ -239,9 +415,11 @@ img {
   .side-bar__title {
     margin: 0;
     padding: 0;
+    margin-bottom: 1vh;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: 50px;
+    font-size: 5vh;
+    line-height: 1;
     color: #525252; }
   .side-bar__title::after {
     content: '.';
@@ -249,9 +427,44 @@ img {
   .side-bar__desc {
     margin: 0;
     padding: 0;
-    margin-bottom: 7vh;
+    margin-bottom: 6vh;
     font-weight: 400;
-    font-size: 28px;
-    color: #525252; }
+    font-size: 2.8vh;
+    color: #525252;
+    line-height: 1; }
+
+.social__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2.5vh;
+  font-size: 2.4vh;
+  color: #7a7a7a;
+  font-weight: 900; }
+
+.social__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.social__link {
+  display: block;
+  margin-right: 5%; }
+
+.social__icon {
+  width: 5vh;
+  height: 5vh;
+  -webkit-transition: .5s;
+  transition: .5s; }
+
+.social__link:hover .social__icon, .social__link:focus .social__icon {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: .5s;
+  transition: .5s; }
+
+.content {
+  width: 64.5%; }
+  .content__scrollbar {
+    font-size: 25px; }
 
 /*# sourceMappingURL=style.css.map */
