@@ -6,10 +6,11 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  width: 64.5%;
+  width: 60%;
 
   &__scrollbar {
-    font-size: 25px;
+    max-height: 82vh;
+    height: 100%;
   }
 
 }
