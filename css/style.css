@@ -663,7 +663,8 @@ img {
       position: relative;
       width: 100%; }
         .side-bar__title--mobile {
-          display: block; }
+          display: block;
+          margin-bottom: 15vw; }
       .side-bar__title {
         font-size: 6vw; }
       .side-bar__desc {
@@ -684,16 +685,27 @@ img {
         display: block;
         top: 5%;
         right: 10%;
-        width: 9vw;
-        height: 9vw;
+        width: 55px;
+        height: 55px;
         border: none;
         background-color: transparent;
         background-image: url("../img/menu.png");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain; }
+        background-size: contain;
+        z-index: 100; }
+      .side-bar__btn--active {
+        background-image: url("../img/menu-close.png");
+        background-color: #d260f7;
+        border-radius: 50%;
+        background-size: 35; }
     .social__title {
       font-size: 3.5vw; }
+    .social__link {
+      margin-right: 10%; }
+    .social__icon {
+      width: 10vw;
+      height: 10vw; }
       .content__scrollbar {
         max-height: 100%; }
     .content {
