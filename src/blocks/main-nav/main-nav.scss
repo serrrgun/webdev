@@ -4,13 +4,54 @@
 
 .main-nav {
 
-  $block-name:                &; // #{$block-name}__element
-
   margin-bottom: 6vh;
   width: 50vh;
   height: 50vh;
   border-radius: 50%;
   overflow: hidden;
+
+  @media screen and (max-width: $screen-sm) {
+    margin: 0 auto;
+    margin-bottom: 10vw;
+    border-radius: 0%;
+    overflow: inherit;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after  {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 5.5vh;
+    top: 50%;
+    width: 4vh;
+    height: 4vh;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &::before  {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 36vw;
+    top: 50%;
+    width: 2vh;
+    height: 2vh;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: $screen-sm) {
+      display: none;
+    }
+  }
 
 
   &__list {
@@ -22,8 +63,17 @@
     list-style: none;
     border: 9px solid #f1f1f1;
     border-radius: 50%;
-
     transform: rotate(-45deg);
+
+    @media screen and (max-width: $screen-sm) {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      transform: rotate(0deg);
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
 
     &::after {
       content: "";
@@ -37,6 +87,10 @@
       top: 50%;
       transform: translate(-50%,- 50%);
       z-index: 15;
+
+      @media screen and (max-width: $screen-sm) {
+        display: none;
+      }
     }
   }
 
@@ -49,6 +103,19 @@
     overflow: hidden;
     transform-origin: 100% 100%;
     transition: .5s;
+
+    @media screen and (max-width: $screen-sm) {
+      position: relative;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      width: 49%;
+      height: 34vw;
+      transform: rotate(0deg) !important;
+      top: 0;
+      left: 0;
+      margin-bottom: 20px;
+      margin-right: 2%;
+    }
 
     &:hover,
     &:focus {
@@ -74,6 +141,18 @@
     &--active {
       background-color: #f1f1f1;
 
+      .main-nav__link--about {
+        @media screen and (max-width: $screen-sm) {
+          background-color: #d260f7;
+        }
+
+        svg {
+          @media screen and (max-width: $screen-sm) {
+            fill: #ffffff;
+          }
+        }
+      }
+
       .main-nav__link span  {
         opacity: 1;
       }
@@ -84,11 +163,33 @@
     }
   }
 
+  &__item:nth-of-type(2n) {
+    @media screen and (max-width: $screen-sm) {
+      margin-right: 0;
+    }
+  }
+
   &__link {
     display: block;
     width: 25vh;
     height: 25vh;
     text-decoration: none;
+
+    @media screen and (max-width: $screen-sm) {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(0deg);
+    }
+
+    svg {
+      @media screen and (max-width: $screen-sm) {
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+      }
+    }
 
     &:hover span,
     &:focus span {
@@ -105,6 +206,7 @@
       transform: rotate(45deg);
       padding-top: 63%;
       padding-left: 48%;
+
 
       svg {
         left: 65%;
@@ -170,6 +272,10 @@
       opacity: 0;
       font-size: 1.8vh;
       color: #656565;
+
+      @media screen and (max-width: $screen-sm) {
+        display: none
+      }
     }
   }
 

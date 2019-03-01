@@ -34,6 +34,11 @@
     width: 21.5%;
     height: 415px;
     z-index: -10;
+    background-size: contain;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 45%;
+    }
   }
 
   &__content {
@@ -45,6 +50,13 @@
     padding-right: 7.5%;
     padding-top: 9vh;
     padding-bottom: 9vh;
+
+    @media screen and (max-width: $screen-sm) {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      padding: 10%;
+    }
   }
 
   &__footer-wrapper {

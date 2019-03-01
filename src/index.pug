@@ -11,9 +11,11 @@ block meta
 block nav
   section.side-bar
     h1.side-bar__title Сергей Турищев
+    button(type="button" title="Открытие меню").side-bar__btn
     p.side-bar__desc
       span.side_bar__desc-typed
     .side-bar__panel
+      h1.side-bar__title.side-bar__title--mobile Сергей Турищев
       -var selected = 'about me';
       +main-nav(selected)
       +social()

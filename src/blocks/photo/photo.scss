@@ -7,6 +7,13 @@
   display: flex;
   margin-bottom: 6vh;
 
+  @media screen and (max-width: $screen-sm) {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+
   &__inner {
     position: relative;
     overflow: hidden;
@@ -27,6 +34,13 @@
       border-radius: 50%;
       transition: .5s;
 
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      width: 55vw;
+      height: 55vw;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 

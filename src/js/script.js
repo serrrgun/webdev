@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   /* Инициализация плагина набора текста */
   var typed = new Typed('.side_bar__desc-typed', {
-    strings: ['Я ^2000 фронтенд-разработчик.', 'Я ^2000 HTML-верстальщик.'],
+    strings: ['^2000 Frontend-разработчик.', '^2000 HTML-верстальщик.'],
     typeSpeed: 80,
     backSpeed: 40,
     loop: true,
@@ -13,6 +13,12 @@ $(document).ready(function(){
   /* Инициализация плагина скроллбара */
 
   jQuery('.scrollbar-macosx').scrollbar();
+
+  /* Открытие/закрытие мобильного меню */
+
+  $('.side-bar__btn').click(function() {
+    $('.side-bar__panel').toggle(500);
+});
 
 });
 

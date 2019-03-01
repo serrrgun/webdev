@@ -11,7 +11,14 @@
   &__scrollbar {
     max-height: 82vh;
     height: 100%;
+
+    @media screen and (max-width: $screen-sm) {
+      max-height: 100%;
+    }
   }
 
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+  }
 }
 
