@@ -447,7 +447,7 @@ img {
     line-height: 1;
     color: #525252; }
     .side-bar__title--mobile {
-      margin-bottom: 10vw; }
+      display: none; }
   .side-bar__title::after {
     content: '.';
     color: #d55fef; }
@@ -662,6 +662,8 @@ img {
     .side-bar {
       position: relative;
       width: 100%; }
+        .side-bar__title--mobile {
+          display: block; }
       .side-bar__title {
         font-size: 6vw; }
       .side-bar__desc {
