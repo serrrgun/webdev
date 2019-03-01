@@ -693,12 +693,13 @@ img {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        z-index: 100; }
+        z-index: 100;
+        outline: none; }
       .side-bar__btn--active {
         background-image: url("../img/menu-close.png");
         background-color: #d260f7;
         border-radius: 50%;
-        background-size: 35; }
+        background-size: 35px; }
     .social__title {
       font-size: 3.5vw; }
     .social__link {
