@@ -182,19 +182,19 @@
   font-display: swap; }
 
 .chrome {
-  background-image: url(../img/sprite-0022356807055831762.png);
+  background-image: url(../img/sprite-05948872708212545.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-0022356807055831762.png);
+  background-image: url(../img/sprite-05948872708212545.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-0022356807055831762.png);
+  background-image: url(../img/sprite-05948872708212545.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -221,7 +221,8 @@
     left: 0;
     width: 21.5%;
     height: 415px;
-    z-index: -10; }
+    z-index: -10;
+    background-size: contain; }
   .page__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -285,6 +286,30 @@ img {
   height: 50vh;
   border-radius: 50%;
   overflow: hidden; }
+  .main-nav::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 5.5vh;
+    top: 50%;
+    width: 4vh;
+    height: 4vh;
+    border: 7px solid #f1f1f1;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .main-nav::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 36vw;
+    top: 50%;
+    width: 2vh;
+    height: 2vh;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .main-nav__list {
     position: relative;
     width: 50vh;
@@ -421,6 +446,8 @@ img {
     font-size: 5vh;
     line-height: 1;
     color: #525252; }
+    .side-bar__title--mobile {
+      margin-bottom: 10vw; }
   .side-bar__title::after {
     content: '.';
     color: #d55fef; }
@@ -432,6 +459,8 @@ img {
     font-size: 2.8vh;
     color: #525252;
     line-height: 1; }
+  .side-bar__btn {
+    display: none; }
 
 .social__title {
   margin: 0;
@@ -562,5 +591,149 @@ img {
   margin-bottom: 6.5vh;
   font-size: 2.2vh;
   color: #525252; }
+
+@media screen and (max-width: 768px) {
+      .page__inner::after {
+        width: 45%; }
+      .page__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 10%; }
+    .main-nav {
+      margin: 0 auto;
+      margin-bottom: 10vw;
+      border-radius: 0%;
+      overflow: inherit;
+      width: 100%;
+      height: 100%; }
+      .main-nav::after {
+        display: none; }
+      .main-nav::before {
+        display: none; }
+      .main-nav__list {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        border: none;
+        width: 100%;
+        height: 100%; }
+        .main-nav__list::after {
+          display: none; }
+      .main-nav__item {
+        position: relative;
+        background-color: #f1f1f1;
+        border-radius: 50%;
+        width: 49%;
+        height: 34vw;
+        -webkit-transform: rotate(0deg) !important;
+                transform: rotate(0deg) !important;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        margin-right: 2%; }
+        .main-nav__item--active .main-nav__link--about {
+          background-color: #d260f7; }
+        .main-nav__item--active .main-nav__link--about svg {
+          fill: #ffffff; }
+    .main-nav__item:nth-of-type(2n) {
+      margin-right: 0; }
+      .main-nav__link {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg); }
+      .main-nav__link svg {
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 50%; }
+        .main-nav__link span {
+          display: none; }
+    .side-bar {
+      position: relative;
+      width: 100%; }
+      .side-bar__title {
+        font-size: 6vw; }
+      .side-bar__desc {
+        font-size: 5vw; }
+    .side-bar__panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      min-height: 100%;
+      z-index: 30;
+      background-color: #ffffff;
+      padding-top: 10%;
+      padding-left: 10%;
+      display: none; }
+      .side-bar__btn {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 9vw;
+        height: 9vw;
+        border: none;
+        background-color: transparent;
+        background-image: url("../img/menu.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; }
+    .social__title {
+      font-size: 3.5vw; }
+      .content__scrollbar {
+        max-height: 100%; }
+    .content {
+      width: 100%; }
+    .photo {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 2vh; }
+      .photo__inner {
+        width: 55vw;
+        height: 55vw;
+        margin-right: 0;
+        margin-bottom: 20px; }
+    .buttons {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .buttons__link {
+        margin-right: 0;
+        width: 50%;
+        text-align: center;
+        font-size: 4.5vw; }
+        .buttons__link--contact {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          margin-right: 0;
+          margin-bottom: 25px; }
+        .buttons__link--work {
+          padding-left: 4vh; } }
 
 /*# sourceMappingURL=style.css.map */
