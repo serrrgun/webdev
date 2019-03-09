@@ -182,19 +182,19 @@
   font-display: swap; }
 
 .chrome {
-  background-image: url(../img/sprite-05948872708212545.png);
+  background-image: url(../img/sprite-028752814073308985.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-05948872708212545.png);
+  background-image: url(../img/sprite-028752814073308985.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-05948872708212545.png);
+  background-image: url(../img/sprite-028752814073308985.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -219,7 +219,7 @@
     background: url("../img/circle-top.png") no-repeat;
     top: 0;
     left: 0;
-    width: 21.5%;
+    width: 12vw;
     height: 415px;
     z-index: -10;
     background-size: contain; }
@@ -447,7 +447,8 @@ img {
     line-height: 1;
     color: #525252; }
     .side-bar__title--mobile {
-      display: none; }
+      display: none;
+      margin-bottom: 10vw; }
   .side-bar__title::after {
     content: '.';
     color: #d55fef; }
@@ -663,8 +664,7 @@ img {
       position: relative;
       width: 100%; }
         .side-bar__title--mobile {
-          display: block;
-          margin-bottom: 15vw; }
+          display: block; }
       .side-bar__title {
         font-size: 6vw; }
       .side-bar__desc {
@@ -674,39 +674,36 @@ img {
       top: 0;
       left: 0;
       width: 80%;
-      min-height: 100vh;
+      min-height: 100%;
       z-index: 30;
       background-color: #ffffff;
       padding-top: 10%;
       padding-left: 10%;
-      display: none; }
+      display: block;
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      -webkit-transition: .8s;
+      transition: .8s; }
+    .side-bar__panel--active {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+      -webkit-transition: .8s;
+      transition: .8s; }
       .side-bar__btn {
-        position: fixed;
+        position: absolute;
         display: block;
-        top: 5%;
-        right: 10%;
-        width: 55px;
-        height: 55px;
+        top: 0;
+        right: 0;
+        width: 9vw;
+        height: 9vw;
         border: none;
         background-color: transparent;
         background-image: url("../img/menu.png");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
-        z-index: 100;
-        outline: none; }
-      .side-bar__btn--active {
-        background-image: url("../img/menu-close.png");
-        background-color: #d260f7;
-        border-radius: 50%;
-        background-size: 35px; }
+        background-size: contain; }
     .social__title {
       font-size: 3.5vw; }
-    .social__link {
-      margin-right: 10%; }
-    .social__icon {
-      width: 10vw;
-      height: 10vw; }
       .content__scrollbar {
         max-height: 100%; }
     .content {
