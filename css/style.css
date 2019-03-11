@@ -484,6 +484,14 @@ img {
   .side-bar__btn {
     display: none;
     outline: none; }
+    .side-bar__btn--skills.side-bar__btn--active {
+      background-color: #00dbaf; }
+    .side-bar__btn--portfolio.side-bar__btn--active {
+      background-color: #f56a60; }
+    .side-bar__btn--skills.side-bar__btn--active {
+      background-color: #00dbaf; }
+    .side-bar__btn--experience.side-bar__btn--active {
+      background-color: #5699fe; }
 
 .social__title {
   margin: 0;
@@ -737,6 +745,12 @@ img {
         outline: none;
         -webkit-transition: .8s;
         transition: .8s; }
+      .side-bar__btn--skills {
+        background-image: url("../img/menu-skills.png"); }
+      .side-bar__btn--portfolio {
+        background-image: url("../img/menu-portfolio.png"); }
+      .side-bar__btn--experience {
+        background-image: url("../img/menu-experience.png"); }
       .side-bar__btn--active {
         background-image: url("../img/menu-close.png");
         background-color: #d260f7;
