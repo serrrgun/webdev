@@ -182,19 +182,19 @@
   font-display: swap; }
 
 .chrome {
-  background-image: url(../img/sprite-028752814073308985.png);
+  background-image: url(../img/sprite-0600256130088215.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-028752814073308985.png);
+  background-image: url(../img/sprite-0600256130088215.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-028752814073308985.png);
+  background-image: url(../img/sprite-0600256130088215.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -219,9 +219,18 @@
     background: url("../img/circle-top.png") no-repeat;
     top: 0;
     left: 0;
-    width: 12vw;
+    width: 15%;
     height: 415px;
     z-index: -10;
+    background-size: contain; }
+  .page__inner--skills::after {
+    background: url("../img/circle-top-skills.png") no-repeat;
+    background-size: contain; }
+  .page__inner--portfolio::after {
+    background: url("../img/circle-top-portfolio.png") no-repeat;
+    background-size: contain; }
+  .page__inner--experience::after {
+    background: url("../img/circle-top-experience.png") no-repeat;
     background-size: contain; }
   .page__content {
     display: -webkit-box;
@@ -366,6 +375,12 @@ img {
         opacity: 1; }
       .main-nav__item--active .main-nav__link svg {
         fill: #d260f7; }
+      .main-nav__item--active .main-nav__link--skills svg {
+        fill: #00dbaf; }
+      .main-nav__item--active .main-nav__link--portfolio svg {
+        fill: #f56a60; }
+      .main-nav__item--active .main-nav__link--experience svg {
+        fill: #5699fe; }
   .main-nav__link {
     display: block;
     width: 25vh;
@@ -452,6 +467,12 @@ img {
   .side-bar__title::after {
     content: '.';
     color: #d55fef; }
+  .side-bar__title--portfolio::after {
+    color: #f56a60; }
+  .side-bar__title--skills::after {
+    color: #00dbaf; }
+  .side-bar__title--experience::after {
+    color: #5699fe; }
   .side-bar__desc {
     margin: 0;
     padding: 0;
@@ -594,7 +615,7 @@ img {
   font-size: 2.2vh;
   color: #525252; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
       .page__inner::after {
         width: 45%; }
       .page__content {
@@ -634,8 +655,8 @@ img {
         position: relative;
         background-color: #f1f1f1;
         border-radius: 50%;
-        width: 49%;
-        height: 37vw;
+        width: 110px;
+        height: 110px;
         -webkit-transform: rotate(0deg) !important;
                 transform: rotate(0deg) !important;
         top: 0;
@@ -646,6 +667,14 @@ img {
           background-color: #d260f7; }
         .main-nav__item--active .main-nav__link--about svg {
           fill: #ffffff; }
+          .main-nav__item--active .main-nav__link svg {
+            fill: #ffffff; }
+        .main-nav__item--active .main-nav__link--skills {
+          background-color: #00dbaf; }
+        .main-nav__item--active .main-nav__link--portfolio {
+          background-color: #f56a60; }
+        .main-nav__item--active .main-nav__link--experience {
+          background-color: #5699fe; }
     .main-nav__item:nth-of-type(2n) {
       margin-right: 0; }
       .main-nav__link {
@@ -665,7 +694,8 @@ img {
       position: relative;
       width: 100%; }
         .side-bar__title--mobile {
-          display: block; }
+          display: block;
+          margin-bottom: 15vw; }
       .side-bar__title {
         font-size: 6vw; }
       .side-bar__desc {
@@ -675,7 +705,7 @@ img {
       top: 0;
       left: 0;
       width: 90%;
-      min-height: 100%;
+      min-height: 100vh;
       z-index: 30;
       background-color: #ffffff;
       padding-top: 10%;
@@ -693,7 +723,7 @@ img {
       .side-bar__btn {
         position: fixed;
         display: block;
-        top: 4%;
+        top: 5%;
         right: 10%;
         width: 12vw;
         height: 12vw;
@@ -703,20 +733,17 @@ img {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        z-index: 50;
-        -webkit-transition: .5s;
-        transition: .5s; }
+        z-index: 100;
+        outline: none;
+        -webkit-transition: .8s;
+        transition: .8s; }
       .side-bar__btn--active {
-        background-image: url("../img/cancel.png");
-        background-color: #d55fef;
+        background-image: url("../img/menu-close.png");
+        background-color: #d260f7;
         border-radius: 50%;
-        width: 12vw;
-        height: 12vw;
         background-size: 7vw 7vw;
-        -webkit-transition: .5s;
-        transition: .5s; }
-    .social__title {
-      font-size: 3.5vw; }
+        -webkit-transition: .8s;
+        transition: .8s; }
       .content__scrollbar {
         max-height: 100%; }
     .content {
@@ -748,9 +775,10 @@ img {
               align-items: center; }
       .buttons__link {
         margin-right: 0;
-        width: 50%;
+        width: 75%;
         text-align: center;
-        font-size: 4.5vw; }
+        font-size: 6vw;
+        line-height: 5vh; }
         .buttons__link--contact {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
@@ -760,5 +788,54 @@ img {
           margin-bottom: 25px; }
         .buttons__link--work {
           padding-left: 4vh; } }
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+      .page__content {
+        padding: 5%; }
+    .main-nav {
+      margin-bottom: 0vw; }
+    .main-nav__item:nth-of-type(2n) {
+      margin-right: 2%; }
+        .side-bar__title--mobile {
+          margin-bottom: 5vw; }
+      .side-bar__title {
+        font-size: 4vw; }
+      .side-bar__desc {
+        margin-bottom: 25vh; }
+    .side-bar__panel {
+      padding-left: 5%;
+      padding-top: 5%; }
+      .side-bar__btn {
+        width: 10vw;
+        height: 10vw;
+        top: 8%;
+        right: 8%; }
+      .buttons__link {
+        line-height: 15vh;
+        padding-top: 0; }
+    .about__title {
+      font-size: 9vh;
+      margin-bottom: 15vh; }
+      .about__title::before {
+        bottom: -3vh;
+        width: 25vh; }
+    .about__desc {
+      font-size: 5vh; } }
+
+@media screen and (max-width: 768px) {
+    .social__title {
+      font-size: 3.5vw; }
+    .social__link {
+      margin-right: 10%; }
+    .social__icon {
+      width: 10vw;
+      height: 10vw; } }
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .social__link {
+      margin-right: 5%; }
+    .social__icon {
+      width: 7vw;
+      height: 7vw; } }
 
 /*# sourceMappingURL=style.css.map */
