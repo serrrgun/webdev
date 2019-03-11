@@ -12,12 +12,12 @@
     max-height: 82vh;
     height: 100%;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       max-height: 100%;
     }
   }
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-md) {
     width: 100%;
   }
 }

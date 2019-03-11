@@ -14,6 +14,11 @@
     font-size: 3.3vh;
     color: #525252;
 
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      font-size: 9vh;
+      margin-bottom: 15vh;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -23,6 +28,11 @@
       height: 5px;
       background-color: #d55fef;
       border-radius: 3px;
+
+      @media screen and (max-width: $screen-md) and (orientation: landscape) {
+        bottom: -3vh;
+        width: 25vh;
+      }
     }
   }
 
@@ -31,6 +41,10 @@
     margin-bottom: 6.5vh;
     font-size: 2.2vh;
     color:#525252;
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      font-size: 5vh;
+    }
   }
 
 }

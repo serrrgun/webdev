@@ -31,14 +31,29 @@
     background: url('../img/circle-top.png') no-repeat;
     top: 0;
     left: 0;
-    width: 21.5%;
+    width: 15%;
     height: 415px;
     z-index: -10;
     background-size: contain;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       width: 45%;
     }
+  }
+
+  &__inner--skills::after {
+    background: url('../img/circle-top-skills.png') no-repeat;
+    background-size: contain;
+  }
+
+  &__inner--portfolio::after {
+    background: url('../img/circle-top-portfolio.png') no-repeat;
+    background-size: contain;
+  }
+
+  &__inner--experience::after {
+    background: url('../img/circle-top-experience.png') no-repeat;
+    background-size: contain;
   }
 
   &__content {
@@ -51,11 +66,15 @@
     padding-top: 9vh;
     padding-bottom: 9vh;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       flex-direction: column;
       height: auto;
       width: 100%;
       padding: 10%;
+    }
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      padding: 5%;
     }
   }
 

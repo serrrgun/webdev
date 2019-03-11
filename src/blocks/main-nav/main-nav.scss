@@ -10,13 +10,17 @@
   border-radius: 50%;
   overflow: hidden;
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-md) {
     margin: 0 auto;
     margin-bottom: 10vw;
     border-radius: 0%;
     overflow: inherit;
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width: $screen-md) and (orientation: landscape) {
+    margin-bottom: 0vw;
   }
 
   &::after  {
@@ -31,7 +35,7 @@
     border-radius: 50%;
     transform: translateY(-50%);
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       display: none;
     }
   }
@@ -48,7 +52,7 @@
     border-radius: 50%;
     transform: translateY(-50%);
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       display: none;
     }
   }
@@ -65,7 +69,7 @@
     border-radius: 50%;
     transform: rotate(-45deg);
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       position: relative;
       display: flex;
       flex-wrap: wrap;
@@ -88,7 +92,7 @@
       transform: translate(-50%,- 50%);
       z-index: 15;
 
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: $screen-md) {
         display: none;
       }
     }
@@ -104,12 +108,12 @@
     transform-origin: 100% 100%;
     transition: .5s;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       position: relative;
       background-color: #f1f1f1;
       border-radius: 50%;
-      width: 49%;
-      height: 34vw;
+      width: 110px;
+      height: 110px;
       transform: rotate(0deg) !important;
       top: 0;
       left: 0;
@@ -142,12 +146,12 @@
       background-color: #f1f1f1;
 
       .main-nav__link--about {
-        @media screen and (max-width: $screen-sm) {
+        @media screen and (max-width: $screen-md) {
           background-color: #d260f7;
         }
 
         svg {
-          @media screen and (max-width: $screen-sm) {
+          @media screen and (max-width: $screen-md) {
             fill: #ffffff;
           }
         }
@@ -159,13 +163,55 @@
 
       .main-nav__link svg {
         fill: #d260f7;
+
+        @media screen and (max-width: $screen-md) {
+          fill: #ffffff;
+        }
+      }
+
+      .main-nav__link--skills {
+
+        @media screen and (max-width: $screen-md) {
+          background-color: #00dbaf;
+        }
+
+
+        svg {
+          fill: #00dbaf;
+        }
+      }
+
+      .main-nav__link--portfolio {
+
+        @media screen and (max-width: $screen-md) {
+          background-color: #f56a60;
+        }
+
+
+        svg {
+          fill: #f56a60;
+        }
+      }
+
+      .main-nav__link--experience {
+
+        @media screen and (max-width: $screen-md) {
+          background-color: #5699fe;
+        }
+
+        svg {
+          fill: #5699fe;
+        }
       }
     }
   }
 
   &__item:nth-of-type(2n) {
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       margin-right: 0;
+    }
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      margin-right: 2%;
     }
   }
 
@@ -175,7 +221,7 @@
     height: 25vh;
     text-decoration: none;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       padding: 0;
       width: 100%;
       height: 100%;
@@ -183,7 +229,7 @@
     }
 
     svg {
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: $screen-md) {
         top: 50%;
         left: 50%;
         width: 50%;
@@ -273,7 +319,7 @@
       font-size: 1.8vh;
       color: #656565;
 
-      @media screen and (max-width: $screen-sm) {
+      @media screen and (max-width: $screen-md) {
         display: none
       }
     }

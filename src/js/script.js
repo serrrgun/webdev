@@ -16,8 +16,11 @@ $(document).ready(function(){
 
   /* Открытие/закрытие мобильного меню */
 
-  $('.side-bar__btn').click(function() {
-    $('.side-bar__panel').toggle(500);
+  var button = $('.side-bar__btn')
+
+  button.click(function() {
+    $('.side-bar__panel').toggleClass('side-bar__panel--active');
+    button.toggleClass('side-bar__btn--active');
 });
 
 });

@@ -27,12 +27,29 @@
     display: block;
     margin-right: 5%;
 
+    @media screen and (max-width: $screen-sm) {
+      margin-right: 10%;
+    }
+
+    @media screen and (max-width: $screen-sm) and (orientation: landscape) {
+      margin-right: 5%;
+    }
   }
 
   &__icon {
     width: 5vh;
     height: 5vh;
     transition: .5s;
+
+    @media screen and (max-width: $screen-sm) {
+      width: 10vw;
+      height: 10vw;
+    }
+
+    @media screen and (max-width: $screen-sm) and (orientation: landscape) {
+      width: 7vw;
+      height: 7vw;
+    }
   }
 
   &__link:hover,

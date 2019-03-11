@@ -8,7 +8,7 @@
 
   width: 40%;
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: $screen-md) {
     position: relative;
     width: 100%;
   }
@@ -24,17 +24,43 @@
     color: #525252;
 
     &--mobile {
+      display: none;
       margin-bottom: 10vw;
+
+      @media screen and (max-width: $screen-md) {
+        display: block;
+        margin-bottom: 15vw;
+      }
+
+      @media screen and (max-width: $screen-md) and (orientation: landscape) {
+        margin-bottom: 5vw;
+      }
     }
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       font-size: 6vw
+    }
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      font-size: 4vw;
     }
   }
 
   &__title::after {
     content: '.';
     color: #d55fef;
+  }
+
+  &__title--portfolio::after {
+    color: #f56a60;
+  }
+
+  &__title--skills::after {
+    color: #00dbaf;
+  }
+
+  &__title--experience::after {
+    color: #5699fe;
   }
 
   &__desc {
@@ -46,42 +72,82 @@
     color: #525252;
     line-height: 1;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       font-size: 5vw;
+    }
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      margin-bottom: 25vh;
     }
   }
 
   &__panel {
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-md) {
       position: fixed;
       top: 0;
       left: 0;
-      width: 80%;
-      min-height: 100%;
+      width: 90%;
+      min-height: 100vh;
       z-index: 30;
       background-color: #ffffff;
       padding-top: 10%;
       padding-left: 10%;
-      display: none;
+      display: block;
+      transform: translateY(-100%);
+      transition: .8s;
+    }
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      padding-left: 5%;
+      padding-top: 5%;
+    }
+  }
+
+  &__panel--active {
+    @media screen and (max-width: $screen-md) {
+      transform: translateY(0%);
+      transition: .8s;
     }
   }
 
   &__btn {
     display: none;
+    outline: none;
 
-    @media screen and (max-width: $screen-sm) {
-      position: absolute;
+    @media screen and (max-width: $screen-md) {
+      position: fixed;
       display: block;
-      top: 0;
-      right: 0;
-      width: 9vw;
-      height: 9vw;
+      top: 5%;
+      right: 10%;
+      width: 12vw;
+      height: 12vw;
       border: none;
       background-color: transparent;
       background-image: url("../img/menu.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      z-index: 100;
+      outline: none;
+      transition: .8s;
+    }
+
+    @media screen and (max-width: $screen-md) and (orientation: landscape) {
+      width: 10vw;
+      height: 10vw;
+      top: 8%;
+      right: 8%;
+    }
+
+    &--active {
+      @media screen and (max-width: $screen-md) {
+        background-image: url("../img/menu-close.png");
+        background-color: #d260f7;
+        border-radius: 50%;
+        background-size: 7vw 7vw;
+        transition: .8s;
+
+      }
     }
   }
 }

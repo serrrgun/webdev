@@ -1,0 +1,31 @@
+extends templates/layout-portfolio.pug
+
+block meta
+  title Portfolio
+  meta(name='description', content='Home page!')
+
+//- block append head
+//-   link(rel="stylesheet", href="some.css")
+//-   script(src='some.js')
+
+block nav
+  section.side-bar
+    h1.side-bar__title.side-bar__title--portfolio Сергей Турищев
+    button(type="button" title="Открытие меню").side-bar__btn
+    p.side-bar__desc
+      span.side_bar__desc-typed
+    .side-bar__panel
+      h1.side-bar__title.side-bar__title--portfolio.side-bar__title--mobile Сергей Турищев
+      -var selected = 'portfolio';
+      +main-nav(selected)
+      +social()
+
+block content
+  section.content
+    .content__scrollbar.scrollbar-macosx
+
+
+
+
+//- block append page-bottom
+//-   script(src='some.js')
