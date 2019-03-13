@@ -182,19 +182,19 @@
   font-display: swap; }
 
 .chrome {
-  background-image: url(../img/sprite-0788335492851904.png);
+  background-image: url(../img/sprite-031640463346931025.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px; }
 
 .github-logo {
-  background-image: url(../img/sprite-0788335492851904.png);
+  background-image: url(../img/sprite-031640463346931025.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px; }
 
 .placeholder {
-  background-image: url(../img/sprite-0788335492851904.png);
+  background-image: url(../img/sprite-031640463346931025.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px; }
@@ -544,6 +544,8 @@ img {
       height: 6px;
       border-radius: 3px;
       background-color: #f84b3e; }
+    .content__title--experience::before {
+      background-color: #428af6; }
 
 .photo {
   display: -webkit-box;
@@ -777,6 +779,56 @@ img {
     overflow: hidden;
     margin-right: 2%;
     margin-bottom: 2%; }
+
+.experience__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .experience__list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #f1f1f1; }
+
+.experience__item {
+  position: relative;
+  padding-left: 50px;
+  padding-bottom: 70px; }
+  .experience__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #c6c6c6;
+    border-radius: 50%; }
+  .experience__item--active::before {
+    background-color: #428af6; }
+  .experience__item-date {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: left;
+    color: #9b9b9b;
+    line-height: 1; }
+  .experience__item-title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #525252; }
+  .experience__item-desc {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: left;
+    color: #525252; }
   @media (min-width: 992px) and (max-width: 1200px) {
       .work-list article {
         width: 50%;
