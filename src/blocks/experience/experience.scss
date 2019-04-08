@@ -1,0 +1,73 @@
+// В этом файле должны быть стили для БЭМ-блока experience, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.experience {
+
+  &__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 20px;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #c6c6c6;
+      border-radius: 50%;
+    }
+
+    &--active {
+      &::before  {
+        background-color: #428af6;
+      }
+    }
+
+    &-date {
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 800;
+      text-align: left;
+      color: #9b9b9b;
+      line-height: 1;
+    }
+
+    &-title {
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 30px;
+      color: #525252;
+    }
+
+    &-desc {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.33;
+      text-align: left;
+      color: #525252;
+    }
+  }
+
+}

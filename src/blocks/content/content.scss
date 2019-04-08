@@ -20,5 +20,40 @@
   @media screen and (max-width: $screen-md) {
     width: 100%;
   }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+    color: #525252;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      width: 80px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #f84b3e;
+    }
+
+    &--experience {
+      &::before {
+        background-color: #428af6;
+      }
+    }
+
+    &--skills {
+      &::before {
+        background-color: #01d1a7;
+      }
+    }
+  }
+
+
 }
 

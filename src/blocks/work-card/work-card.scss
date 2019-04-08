@@ -1,0 +1,147 @@
+// В этом файле должны быть стили для БЭМ-блока work-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.work-card {
+
+  &__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    perspective: 1000px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__item-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__item-link {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(248, 75, 62, 0.8);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__item-link h2 {
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.78vw;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 6.25vw;
+      margin-bottom: 6vw;
+    }
+  }
+
+  &__item-link h3 {
+    font-size: 0.7vw;
+    font-weight: 700;
+    line-height: 1.3vw;
+    margin: 0;
+    margin-bottom: 0.5vw;
+    text-align: center;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 4vw;
+      margin-bottom: 5vw;
+    }
+  }
+
+  &__item-link h3::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 1px;
+    margin: 1vw auto;
+    background-color: #fff;
+
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      height: 2px;
+      margin: 2vw auto;
+    }
+  }
+
+  &__item-icon {
+    width: 3vw;
+    height: 3vw;
+
+    @media screen and (max-width: $screen-md) {
+      width: 10vw;
+      height: 10vw;
+    }
+  }
+
+  &__item-front,
+  &__item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: .8s;
+    backface-visibility: hidden;
+  }
+
+  &__item-front {
+    background-color: #fff;
+  }
+
+  &__item-back {
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+
+  &__item:hover &__item-front,
+  &__item:focus &__item-front {
+    transform: rotateY(180deg);
+  }
+
+  &__item:hover &__item-back,
+  &__item:focus &__item-back {
+    transform: rotateY(360deg);
+  }
+
+  &__item-back--mishka {
+    background-image: url('../img/project__mishka.jpg');
+  }
+
+  &__item-back--sedona {
+    background-image: url('../img/project__sedona.jpg');
+  }
+
+  &__item-back--keksobooking {
+    background-image: url('../img/project__keksobooking.jpg');
+  }
+
+  &__item-back--guessmelody {
+    background-image: url('../img/project__guessmelody.png');
+  }
+
+  &__item-back--portfolio {
+    background-image: url('../img/project__portfolio.jpg');
+  }
+
+}

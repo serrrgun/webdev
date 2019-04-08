@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока work-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.work-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & article {
+    height: 15.1vw;
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      height: 78.5vw;
+      margin-bottom: 1.25vmax;
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg) {
+      width: 50%;
+      height: 30vw;
+    }
+  }
+
+
+}

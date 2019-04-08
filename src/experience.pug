@@ -11,7 +11,7 @@ block meta
 block nav
   section.side-bar
     h1.side-bar__title.side-bar__title--experience Сергей Турищев
-    button(type="button" title="Открытие меню").side-bar__btn
+    button(type="button" title="Открытие меню").side-bar__btn.side-bar__btn--experience
     p.side-bar__desc
       span.side_bar__desc-typed
     .side-bar__panel
@@ -23,6 +23,8 @@ block nav
 block content
   section.content
     .content__scrollbar.scrollbar-macosx
+      h2.content__title.content__title--experience Опыт
+      +experience()
 
 
 

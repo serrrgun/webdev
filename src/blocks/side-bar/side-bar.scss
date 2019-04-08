@@ -132,6 +132,40 @@
       transition: .8s;
     }
 
+    &--skills {
+      @media screen and (max-width: $screen-md) {
+        background-image: url("../img/menu-skills.png");
+      }
+    }
+
+    &--skills.side-bar__btn--active {
+      background-color: #00dbaf;
+    }
+
+    &--portfolio {
+      @media screen and (max-width: $screen-md) {
+        background-image: url("../img/menu-portfolio.png");
+      }
+    }
+
+    &--portfolio.side-bar__btn--active {
+      background-color: #f56a60;
+    }
+
+    &--skills.side-bar__btn--active {
+      background-color: #00dbaf;
+    }
+
+    &--experience {
+      @media screen and (max-width: $screen-md) {
+        background-image: url("../img/menu-experience.png");
+      }
+    }
+
+    &--experience.side-bar__btn--active {
+      background-color: #5699fe;
+    }
+
     @media screen and (max-width: $screen-md) and (orientation: landscape) {
       width: 10vw;
       height: 10vw;

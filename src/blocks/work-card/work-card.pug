@@ -1,0 +1,64 @@
+mixin work-card()
+
+  -
+    var works = [
+      {
+        'link': 'error-page.html',
+        'src': 'img/project__mishka.jpg',
+        'modificator': 'work-card__item-back work-card__item-back--mishka',
+        'title': 'Проект "Мишка"',
+        'desc': 'Интернет-магазин'
+      },
+
+      {
+        'link': 'https://serrrgun.github.io/246491-sedona',
+        'src': 'img/project__sedona.jpg',
+        'modificator': 'work-card__item-back work-card__item-back--sedona',
+        'title': 'Проект "Седона"',
+        'desc': 'Сайт по поиску гостиниц в Седона'
+      },
+
+      {
+        'link': 'https://serrrgun.github.io/246491-keksobooking',
+        'src': 'img/project__keksobooking.jpg',
+        'modificator': 'work-card__item-back work-card__item-back--keksobooking',
+        'title': 'Проект "Кексобукинг"',
+        'desc': 'Сайт по поиску жилья'
+      },
+
+      {
+        'link': 'error-page.html',
+        'src': 'img/project__portfolio.jpg',
+        'modificator': 'work-card__item-back work-card__item-back--portfolio',
+        'title': 'Проект "Портфолио"',
+        'desc': 'Мой личный сайт-портфолио'
+      },
+
+      {
+        'link': 'https://serrrgun.github.io/246491-guess-melody',
+        'src': 'img/project__guessmelody.png',
+        'modificator': 'work-card__item-back work-card__item-back--guessmelody',
+        'title': 'Проект <br> "Угадай мелодию"',
+        'desc': 'Игра на чистом JS'
+      },
+
+      {
+        'link': 'https://serrrgun.github.io/246491-keksobooking',
+        'src': 'img/project__keksobooking.jpg',
+        'modificator': 'work-card__item-back work-card__item-back--keksobooking',
+        'title': 'Проект "Кексобукинг"',
+        'desc': 'Сайт по поиску жилья'
+      },
+    ];
+
+
+  each val in works
+    article
+      .work-card__item(tabindex="1")
+        .work-card__item-front
+          img.work-card__item-img(src=val.src)
+        div(class=val.modificator)
+          a.work-card__item-link(href=val.link)
+            h2.work-card__item-title!= val.title
+            h3.work-card__item-desc!= val.desc
+
