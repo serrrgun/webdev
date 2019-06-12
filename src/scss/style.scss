@@ -4,6 +4,7 @@
 
 @import './src/scss/plugins/typed.scss';
 @import './src/scss/plugins/jquery.scrollbar.scss';
+@import './src/scss/plugins/swiper.scss';
 
 // Глобальные подключения
 @import 'variables.scss';
@@ -28,3 +29,5 @@
 @import './src/blocks/work-card/work-card.scss';
 @import './src/blocks/work-list/work-list.scss';
 @import './src/blocks/experience/experience.scss';
+@import './src/blocks/progress-bar/progress-bar.scss';
+@import './src/blocks/project/project.scss';

@@ -11,14 +11,24 @@
   &__scrollbar {
     max-height: 82vh;
     height: 100%;
+    padding-right: 10px !important;
 
     @media screen and (max-width: $screen-md) {
       max-height: 100%;
+      padding-right: 0 !important;
     }
   }
 
   @media screen and (max-width: $screen-md) {
     width: 100%;
+  }
+
+  &__scrollbar--pr {
+    padding-right: 10% !important;
+
+    @media screen and (max-width: $screen-md) {
+      padding-right: 1% !important;
+    }
   }
 
   &__title {
@@ -52,6 +62,32 @@
         background-color: #01d1a7;
       }
     }
+
+    &--project {
+      display: block;
+      text-decoration: none;
+      padding-left: 40px;
+      background-image: url("../img/left-arrow.png");
+      background-repeat: no-repeat;
+      background-size: 29px;
+      background-position: 5px 50%;
+      transition: .3s;
+
+      &::before {
+        left: 40px;
+      }
+
+      &:hover {
+        background-position: 0 50%;
+        transition: .3s;
+      } 
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    color: #525252;
+    margin-bottom: 50px;
   }
 
 

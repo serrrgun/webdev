@@ -67,6 +67,8 @@ let jsList = [
   './node_modules/object-fit-images/dist/ofi.js',
   dirs.source + '/js/typed.js',
   dirs.source + '/js/jquery.scrollbar.min.js',
+  dirs.source + '/js/circle-progress.min.js',
+  dirs.source + '/js/swiper.js',
   dirs.source + '/js/script.js',
 ];
 

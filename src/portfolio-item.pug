@@ -1,0 +1,42 @@
+extends templates/layout-portfolio.pug
+
+block meta
+  title Portfolio
+  meta(name='description', content='Home page!')
+
+//- block append head
+//-   link(rel="stylesheet", href="some.css")
+//-   script(src='some.js')
+
+block nav
+  section.side-bar
+    h1.side-bar__title.side-bar__title--portfolio Сергей Турищев
+    button(type="button" title="Открытие меню").side-bar__btn.side-bar__btn--portfolio
+    p.side-bar__desc
+      span.side_bar__desc-typed
+    .side-bar__panel
+      h1.side-bar__title.side-bar__title--portfolio.side-bar__title--mobile Сергей Турищев
+      -var selected = 'portfolio';
+      +main-nav(selected)
+      +social()
+
+block content
+  section.content
+    .content__scrollbar.scrollbar-macosx
+      a(href="portfolio.html").content__title.content__title--project Проект "Седона"
+      .project
+        .project__slider
+            .swiper-container
+                .swiper-wrapper
+                    .project__img.swiper-slide
+                        img(src="img/project__sedona.jpg", alt="Проект Седона")
+                    .project__img.swiper-slide
+                        img(src="img/project__sedona.jpg", alt="Проект Седона")
+                    .project__img.swiper-slide
+                        img(src="img/project__sedona.jpg", alt="Проект Седона")
+                .swiper-pagination  
+        .project__desc    
+        p.project__ph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        p.project__ph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        p.project__ph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      

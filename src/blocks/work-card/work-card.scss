@@ -19,7 +19,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    overflow: hidden;
+    //overflow: hidden;
   }
 
   &__item-link {
@@ -32,7 +32,7 @@
     z-index: 2;
     width: 100%;
     height: inherit;
-    background-color: rgba(248, 75, 62, 0.8);
+    background-color: rgba(248, 75, 62, 0.6);
     color: #fff;
     text-decoration: none;
     border-radius: 50%;
@@ -99,7 +99,7 @@
     left: 0;
     top: 0;
     display: flex;
-    transition: .8s;
+    transition: .5s;
     backface-visibility: hidden;
   }
 
